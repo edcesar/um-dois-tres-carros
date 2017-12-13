@@ -12,7 +12,7 @@ class PostController extends Controller
    
     public function index()
     {
-        return view('admin.post.index', ['posts' => Post::orderBy('created_at', 'desc')->paginate($this->totalPages)]);
+        return view('admin.post.index', ['posts' => Post::orderBy('id', 'desc')->paginate($this->totalPages)]);
     }
 
     public function create()

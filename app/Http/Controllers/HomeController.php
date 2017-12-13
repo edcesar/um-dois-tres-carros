@@ -11,7 +11,7 @@ class HomeController extends Controller
     
     public function index()
     {
-        return view('home', ['posts' => Post::orderBy('created_at', 'desc')->paginate($this->totalPages)]);
+        return view('home', ['posts' => Post::orderBy('id', 'desc')->paginate($this->totalPages)]);
     }
     
     public function post($id)
